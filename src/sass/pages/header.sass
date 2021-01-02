@@ -1,0 +1,33 @@
+.main-header
+  padding: 16px 0
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__logo
+    img
+      width: 100%
+      max-width: 268px
+
+.main-nav
+  display: flex
+  align-items: center
+  &__item
+    margin-right: 2rem
+    &:last-child
+      margin-right: 0
+  &__link
+    font-size: 16px
+    font-weight: 700
+    line-height: 22px
+    color: $accent
+    transition: all 300ms
+    &:hover
+      text-decoration: underline
+      color: $accent
+  &__button
+    padding: 11px 22px
+    color: $white
+    &:hover
+      color: $white
+      text-decoration: none
