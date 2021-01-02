@@ -1,4 +1,21 @@
+.title-wrap
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 100%
+  padding-bottom: 2rem
+.title
+  color: $accent
+  margin-bottom: 1rem
+.subtitle
+  color: $subtitle-color
+  
 .hero
+  display: flex
+  align-items: center
+  min-height: 90vh
+  padding-top: 0
   &__subtitle
     color: $second
     text-transform: uppercase
@@ -14,3 +31,97 @@
       height: .5rem
       border-radius: 50%
       background-color: $green
+  &__link
+    padding: .5rem 1.25rem
+    width: max-content
+  &__content
+    display: flex
+    flex-direction: column
+    padding-top: 48px
+  &__text
+    margin-top: 1rem
+    margin-bottom: 2rem
+    font-size: 18px
+    line-height: 27px
+    color: $font-color
+  &__img
+    width: 100%
+    max-width: 570px
+
+.first-form
+  padding: 2rem 4rem 2rem 2rem
+  border-radius: 1rem
+  background-color: $accent
+  position: relative
+  display: flex
+  align-items: center
+  &::after
+    content: url('../img/chr-hat.svg')
+    position: absolute
+    right: -40px
+    top: -42px
+  &__content
+    width: 100%
+    max-width: 770px
+  &__title
+    color: $second
+  &__text
+    margin: 1rem 0
+    color: $white
+  &__form
+    display: flex
+    align-items: center
+    width: 100%
+  &__input
+    border-radius: .5rem
+    padding: .66rem 1rem
+    background-color: $white
+    color: $font-color
+    margin-right: 1rem
+    font-size: 16px
+    line-height: 16px
+    border: 2px solid transparent
+    transition: all 300ms
+    &::placeholder
+      color: $font-color
+    &:focus, &:active
+      outline: none
+      border-color: $second
+  &__button
+    padding: 10px 26px
+    border-radius: .5rem
+    background-color: $second
+    color: $white
+    border: none
+    transition: all 300ms
+    font-size: 18px
+    line-height: 27px
+    font-weight: 700
+    &:focus, &:active, &:hover
+      outline: none
+      box-shadow: 0px 4px 12px rgba(250, 194, 105, 0.3)
+
+.cards
+  padding-top: 2rem
+.card
+  border: 1px solid $border-color
+  padding: 2rem
+  background-color: $white
+  border-radius: 1rem
+  position: relative
+  margin-bottom: 30px
+  &__badge
+    padding: .5rem 1rem
+    border-radius: .5rem
+    background-color: $green
+    position: absolute
+    top: -22px
+    right: 2rem
+  &__badge-text
+    color: $white
+  &__title
+    margin-bottom: 0.5rem
+    color: $accent
+  &__text
+    color: $font-color
+  
