@@ -5,11 +5,25 @@
   justify-content: center
   width: 100%
   padding-bottom: 2rem
+  text-align: center
+  &_program
+    padding-bottom: 4rem
 .title
   color: $accent
   margin-bottom: 1rem
+  text-transform: uppercase
 .subtitle
   color: $subtitle-color
+.title-time
+  padding-top: 1rem
+  display: flex
+  align-items: center
+  &__target
+    color: $red
+    font-size: 18px
+    line-height: 27px
+    text-transform: uppercase
+    margin-left: 1rem
   
 .hero
   display: flex
@@ -44,6 +58,7 @@
     font-size: 18px
     line-height: 27px
     color: $font-color
+    max-width: 350px
   &__img
     width: 100%
     max-width: 570px
@@ -55,6 +70,7 @@
   position: relative
   display: flex
   align-items: center
+  justify-content: space-between
   &::after
     content: url('../img/chr-hat.svg')
     position: absolute
@@ -109,7 +125,8 @@
   background-color: $white
   border-radius: 1rem
   position: relative
-  margin-bottom: 30px
+  &_program
+    height: 100%
   &__badge
     padding: .5rem 1rem
     border-radius: .5rem
@@ -124,4 +141,95 @@
     color: $accent
   &__text
     color: $font-color
-  
+    &_accent
+      font-weight: 700
+      color: $accent
+  &__link_program
+    width: 100%
+    padding: .75rem
+    text-align: center
+    margin-top: .5rem
+    font-size: 18px
+    line-height: 27px
+    font-weight: 700
+.card-wrap
+  height: 100%
+  padding-bottom: 50px
+
+// Price
+.price
+  .card-wrap
+    height: inherit
+  .card-wrap_course, .card_course
+    height: 100%
+  .card_course
+    .card__img
+      margin-right: 0
+      margin-top: 4rem
+      text-align: center
+.card
+  &__body, &__list-wrap
+    display: flex
+    align-items: center
+  &_price
+    padding: 2rem 1rem
+    border: 2px solid $border-color
+    transition: all 300ms
+    &:hover
+      border-color: $green
+      box-shadow: 0px 4px 20px rgba(70, 70, 85, 0.25)
+    .card__text
+      margin-bottom: 1rem
+  &__list-wrap
+    justify-content: space-between
+  &__list-item
+    margin-bottom: .5rem
+    color: $font-color
+  &__img
+    margin-right: 1rem
+  &_course
+    .card__title, .card__text
+      margin-bottom: 1rem
+    .card__title
+      text-align: center
+
+.feedback
+  padding-bottom: 4rem
+  &__title, &__text
+    margin-bottom: 1rem
+  &__img img
+    width: 100%
+  &__form
+    display: flex
+    flex-direction: column
+    align-items: center
+    label
+      width: 100%
+  &__input
+    border: 2px solid $border-color
+    border-radius: .5rem
+    padding: 1rem
+    margin-bottom: 1rem
+    color: $font-color
+    font-size: 18px
+    line-height: 18px
+    font-weight: 400
+    width: 100%
+    background-color: $white
+    transition: all 300ms
+    &::placeholder
+      color: $font-color
+    &:active, &:focus
+      outline: none
+      border-color: $accent
+  &__button
+    width: 100%
+    padding: 1rem
+    font-size: 24px
+    line-height: 24px
+    font-weight: 700
+    text-align: center
+    border: none
+  @media (max-width: 992px)
+    &__img
+      margin-bottom: 2rem
