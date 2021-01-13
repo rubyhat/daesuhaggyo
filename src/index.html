@@ -17,6 +17,7 @@
 	<!-- ------ -->
 
 	<!-- Libs -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"> -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 	<!-- ------ -->
@@ -34,16 +35,45 @@
 						</div>
 						<div class="main-header__navigation">
 							<ul class="main-nav">
-								<li class="main-nav__item"><a href="#" class="main-nav__link">О школе</a></li>
-								<li class="main-nav__item"><a href="#" class="main-nav__link">Программа</a></li>
-								<li class="main-nav__item"><a href="#" class="main-nav__link">Цены</a></li>
-								<li class="main-nav__item"><a href="#" class="main-nav__link main-nav__button button">Бесплатный урок</a></li>
+								<li class="main-nav__item"><a href="#" class="main-nav__link scroll-anch" data-target="#about" >О школе</a></li>
+								<li class="main-nav__item"><a href="#" class="main-nav__link scroll-anch" data-target="#program">Программа</a></li>
+								<li class="main-nav__item"><a href="#" class="main-nav__link scroll-anch" data-target="#price">Цены</a></li>
+								<li class="main-nav__item"><a href="#" class="main-nav__link main-nav__button button scroll-anch" data-target="#feedback">Бесплатный урок</a></li>
 							</ul>
+						</div>
+						<div class="burger" data-toggle="modal" data-target="#mobileMenu">
+							<div class="burger-icon">
+								<div class="burger-icon__line"></div>
+								<div class="burger-icon__line"></div>
+								<div class="burger-icon__line"></div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</header>
+
+
+		<div class="modal fade" id="mobileMenu" role="dialog" tabindex="-1" aria-labelledby="mobileMenu" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title">Меню</h3>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<ul class="main-nav">
+							<li class="main-nav__item"><a href="#" class="main-nav__link scroll-anch" data-target="#about">О школе</a></li>
+							<li class="main-nav__item"><a href="#" class="main-nav__link scroll-anch" data-target="#program">Программа</a></li>
+							<li class="main-nav__item main-nav__item_price"><a href="#" class="main-nav__link scroll-anch" data-target="#price">Цены</a></li>
+							<li class="main-nav__item main-nav__item_button"><a href="#" class="main-nav__link main-nav__button button scroll-anch" data-target="#feedback">Бесплатный урок</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<main class="main-content">
 			<section class="hero">
@@ -51,19 +81,19 @@
 					<div class="row">
 						<div class="col-12 col-md-6">
 							<div class="hero__content-wrapper">
-								<div class="hero__content">
+								<div class="hero__content wow animate__animated animate__fadeIn">
 									<h3 class="hero__subtitle">Онлайн школа</h3>
 									<h2 class="hero__title">Корейского языка</h2>
 									<p class="hero__text">
-										Давно мечтаешь изучить корейский язык,
-										но не знаешь с чего начать?
+										Давно мечтаете изучить корейский язык,
+										но не знаете с чего начать?
 									</p>
-									<a href="#" class="hero__link button">Давайте начнем</a>
+									<a href="#" class="hero__link button scroll-anch" data-target="#about">Давайте начнем</a>
 								</div>
 							</div>
 						</div>
 						<div class="col-12 col-md-6">
-							<div class="hero__img-wrap">
+							<div class="hero__img-wrap wow animate__animated animate__fadeIn">
 								<img src="img/hero-img.svg" alt="Image" class="hero__img">
 							</div>
 						</div>
@@ -87,7 +117,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="steps">
+			<section class="steps-section">
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
@@ -96,19 +126,42 @@
 								<p class="subtitle">Три простых шага начать изучать корейский язык</p>
 							</div>
 						</div>
+						<div class="steps">
+							<div class="step wow animate__animated animate__fadeIn">
+								<img src="img/icons/i-step-1.svg" alt="Icon" class="step__icon">
+								<div class="step__content">
+									<h4 class="step__title">Оставляете заявку</h4>
+									<div class="step__text">Оперативно ответим на все Ваши вопросы и поможем определить удобное время для пробного урока.</div>
+								</div>
+							</div>
+							<div class="step wow animate__animated animate__fadeIn animate__delay-1s">
+								<img src="img/icons/i-step-2.svg" alt="Icon" class="step__icon">
+								<div class="step__content">
+									<h4 class="step__title">Пробный урок</h4>
+									<div class="step__text">Приходите, чтобы познакомиться с Вашим преподавателем и лично оценить преимущества обучения с нами</div>
+								</div>
+							</div>
+							<div class="step wow animate__animated animate__fadeIn animate__delay-2s">
+								<img src="img/icons/i-step-3.svg" alt="Icon" class="step__icon">
+								<div class="step__content">
+									<h4 class="step__title">Подбираем курс</h4>
+									<div class="step__text">Предложим максимально комфортный и выгодный для Вас формат и график обучения</div>
+								</div>
+							</div>
+						</div>
 
 					</div>
 				</div>
 			</section>
-			<section class="first-form__wrapper">
+			<section class="first-form__wrapper wow animate__animated animate__fadeIn">
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
 							<div class="first-form">
 								<div class="first-form__content">
-									<h2 class="first-form__title">Оставь заявку и получи подарок!</h2>
-									<p class="first-form__text">Расскажи нам, как с тобой связаться и мы пригласим тебя на бесплатный пробный урок,
-										а также подарим полезную шпаргалку, которая поможет тебе в изучении языка!</p>
+									<h2 class="first-form__title">Оставьте заявку и получите подарок!</h2>
+									<p class="first-form__text">Расскажите нам, как с Вами связаться и мы пригласим Вас на бесплатный пробный урок,
+										а также подарим полезную шпаргалку, которая поможет Вам в изучении языка!</p>
 									<form action="POST" class="first-form__form">
 										<label><input type="text" class="first-form__input" placeholder="Ваше имя"></label>
 										<label><input type="text" class="first-form__input" placeholder="Ваш номер"></label>
@@ -123,17 +176,17 @@
 					</div>
 				</div>
 			</section>
-			<section class="program">
+			<section class="program" id="program">
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
 							<div class="title-wrap title-wrap_program">
 								<h2 class="title">Программа обучения</h2>
-								<p class="subtitle">Комплексное обучение корейскому языку с 0 до 1 уровня</p>
+								<p class="subtitle">Комплексное обучение корейскому языку с 0 до 1급</p>
 							</div>
 						</div>
 						<div class="col-12 col-md-6 col-xl-4">
-							<div class="card-wrap">
+							<div class="card-wrap wow animate__animated animate__fadeIn">
 								<div class="card card_program">
 									<div class="card__badge">
 										<h4 class="card__badge-text">Тема 1</h4>
@@ -150,7 +203,7 @@
 							</div>
 						</div>
 						<div class="col-12 col-md-6 col-xl-4">
-							<div class="card-wrap">
+							<div class="card-wrap wow animate__animated animate__fadeIn">
 								<div class="card card_program">
 									<div class="card__badge">
 										<h4 class="card__badge-text">Тема 2</h4>
@@ -165,7 +218,7 @@
 							</div>
 						</div>
 						<div class="col-12 col-md-6 col-xl-4">
-							<div class="card-wrap">
+							<div class="card-wrap wow animate__animated animate__fadeIn">
 								<div class="card card_program">
 									<div class="card__badge">
 										<h4 class="card__badge-text">Тема 3</h4>
@@ -179,7 +232,7 @@
 							</div>
 						</div>
 						<div class="col-12 col-md-6 col-xl-4">
-							<div class="card-wrap">
+							<div class="card-wrap wow animate__animated animate__fadeIn">
 								<div class="card card_program">
 									<div class="card__badge">
 										<h4 class="card__badge-text">Тема 4</h4>
@@ -192,7 +245,7 @@
 							</div>
 						</div>
 						<div class="col-12 col-md-6 col-xl-4">
-							<div class="card-wrap">
+							<div class="card-wrap wow animate__animated animate__fadeIn">
 								<div class="card card_program">
 									<div class="card__badge">
 										<h4 class="card__badge-text">Тема 5</h4>
@@ -205,7 +258,7 @@
 							</div>
 						</div>
 						<div class="col-12 col-md-6 col-xl-4">
-							<div class="card-wrap">
+							<div class="card-wrap wow animate__animated animate__fadeIn">
 								<div class="card card_program">
 									<div class="card__badge">
 										<h4 class="card__badge-text">Приходи</h4>
@@ -216,7 +269,7 @@
 										Давно думаете об изучении корейского
 										языка? Приходите на наш бесплатный урок, возможно это будет тот самый толчек :)
 									</p>
-									<a href="#" class="button card__link card__link_program">Записаться</a>
+									<a href="#" class="button card__link card__link_program scroll-anch" data-target="#feedback">Записаться</a>
 								</div>
 							</div>
 						</div>
@@ -233,7 +286,7 @@
 							</div>
 						</div>
 						<div class="col-12 col-xl-8">
-							<div class="card-wrap">
+							<div class="card-wrap wow animate__animated animate__fadeIn">
 								<div class="card card_price">
 									<div class="card__badge">
 										<h4 class="card__badge-text">4000 ₽</h4>
@@ -287,7 +340,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="card-wrap">
+							<div class="card-wrap wow animate__animated animate__fadeIn">
 								<div class="card card_price">
 									<div class="card__badge">
 										<h4 class="card__badge-text">2800 ₽</h4>
@@ -343,12 +396,15 @@
 							</div>
 						</div>
 						<div class="col-12 col-xl-4">
-							<div class="card-wrap card-wrap_course">
+							<div class="card-wrap card-wrap_course wow animate__animated animate__fadeIn">
 								<div class="card card_price card_course">
 									<div class="card__badge">
-										<h4 class="card__badge-text">2990 ₽</h4>
+										<h4 class="card__badge-text">от 2990 ₽</h4>
 									</div>
 									<div class="card__body">
+										<div class="card__img card__img_header">
+											<img src="img/img-price-3.svg" alt="Sensei">
+										</div>
 										<div class="card__content">
 											<h3 class="card__title">Авторский курс</h3>
 											<p class="card__text fz-mt lh-mt">
@@ -385,11 +441,152 @@
 													</li>
 												</ul>
 											</div>
-											<div class="card__img">
+											<div class="card__img card__img_footer">
 												<img src="img/img-price-3.svg" alt="Sensei">
 											</div>
 										</div>
 									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="reviews">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="title-wrap">
+								<h2 class="title">Отзывы наших учеников</h2>
+								<p class="subtitle">Отзывы реальных людей, которые изучали язык вместе с нами</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slider">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+									<ol class="carousel-indicators">
+										<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+										<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+										<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+										<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+									</ol>
+									<div class="carousel-inner">
+										<div class="carousel-item active">
+											<div class="slide">
+												<div class="slide__body">
+													<div class="slide__header">
+														<img src="img/slider/img-slider-1.jpg" srcset="img/slider/img-slider-retina-1.jpg 2x" alt="photo" class="slide__photo">
+														<div class="slide__user">
+															<h3 class="slide__username">Виктор Ли</h3>
+															<h5 class="slide__user-status">Ученик школы</h5>
+														</div>
+													</div>
+													<div class="separator">
+														<div class="separator__line"></div>
+														<div class="separator__ellipse"></div>
+														<div class="separator__line"></div>
+													</div>
+													<div class="slide__content">
+														<p class="slide__text">
+															Доброго времени суток, я недавно начал заниматься корейским в вашей школе, и мне все нравится!
+															Уже могу читать свободно на корейском, могу ответить на элементарные вопросы, и так же их задать! Я думал что будет очень
+															сложно... Но как оказалось, очень просто и здорово! Спасибо вам огромное! Как говорится дальше больше 😂
+														</p>
+														<a href="https://vk.com/topic-198172207_46463980" target="_blank" class="slide__link">Страница отзыва</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="carousel-item">
+											<div class="slide">
+												<div class="slide__body">
+													<div class="slide__header">
+														<img src="img/slider/img-slider-2.jpg" srcset="img/slider/img-slider-retina-2.jpg 2x" alt="photo" class="slide__photo">
+														<div class="slide__user">
+															<h3 class="slide__username">Евгения Молчанова</h3>
+															<h5 class="slide__user-status">Ученик школы</h5>
+														</div>
+													</div>
+													<div class="separator">
+														<div class="separator__line"></div>
+														<div class="separator__ellipse"></div>
+														<div class="separator__line"></div>
+													</div>
+													<div class="slide__content">
+														<p class="slide__text">
+															День добрый.
+															Занимаюсь с преподавателем Юлианом с января этого года 2 раза в неделю по часу. За это время была пройдена программа 1 гыпа.
+															Грамотная подача материала, умение донести до ученика знания. Комфортная, домашняя среда обучения и индивидуальный подход делают освоение корейского языка интересным и создают хорошую базу для дальнейшего изучения.
+														</p>
+														<a href="https://vk.com/topic-198172207_46463980" target="_blank" class="slide__link">Страница отзыва</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="carousel-item">
+											<div class="slide">
+												<div class="slide__body">
+													<div class="slide__header">
+														<img src="img/slider/img-slider-3.jpg" srcset="img/slider/img-slider-retina-3.jpg 2x" alt="photo" class="slide__photo">
+														<div class="slide__user">
+															<h3 class="slide__username">Александра Ли</h3>
+															<h5 class="slide__user-status">Ученик школы</h5>
+														</div>
+													</div>
+													<div class="separator">
+														<div class="separator__line"></div>
+														<div class="separator__ellipse"></div>
+														<div class="separator__line"></div>
+													</div>
+													<div class="slide__content">
+														<p class="slide__text">
+															Мне очень нравится система обучения в онлайн-школе: занятия с преподавателем, работа с методическими материалами, изучение слов с помощью карточек и приложения quizlet, возможность задавать вопросы в любое время в чате. Очень мобильно и удобно для студента!
+															На данный момент могу довольно бегло читать на корейском языке, составлять простые предложения, воспринимать на слух пока даётся нелегко, но прогресс определенно есть!
+															Спасибо вам большое❤
+														</p>
+														<a href="https://vk.com/topic-198172207_46463980" target="_blank" class="slide__link">Страница отзыва</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="carousel-item">
+											<div class="slide">
+												<div class="slide__body">
+													<div class="slide__header">
+														<img src="img/slider/img-slider-4.jpg" srcset="img/slider/img-slider-retina-4.jpg 2x" alt="photo" class="slide__photo">
+														<div class="slide__user">
+															<h3 class="slide__username">Saodat Nagimaeva</h3>
+															<h5 class="slide__user-status">Ученик школы</h5>
+														</div>
+													</div>
+													<div class="separator">
+														<div class="separator__line"></div>
+														<div class="separator__ellipse"></div>
+														<div class="separator__line"></div>
+													</div>
+													<div class="slide__content">
+														<p class="slide__text">
+															Здравствуйте :)
+															Обучаюсь в данной школе с начала этого года. За это время поняла, что изучение корейского языка здесь - это правильный выбор ✅ уроки увлекательные; материал преподноситься доступно; учитель всегда готов ответить на вопросы учеников, чтобы убедиться, что все понятно
+														</p>
+														<a href="https://vk.com/topic-198172207_46463980" target="_blank" class="slide__link">Страница отзыва</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+										<span class="sr-only">Previous</span>
+									</a>
+									<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+										<span class="carousel-control-next-icon" aria-hidden="true"></span>
+										<span class="sr-only">Next</span>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -406,13 +603,13 @@
 							</div>
 						</div>
 						<div class="col-12 col-lg-6">
-							<div class="feedback__img">
+							<div class="feedback__img wow animate__animated animate__fadeIn">
 								<img src="img/img-feedback.svg" alt="Image">
 							</div>
 						</div>
 						<div class="col-1"></div>
 						<div class="col-12 col-lg-5">
-							<div class="feedback__content">
+							<div class="feedback__content wow animate__animated animate__fadeIn">
 								<h3 class="feedback__title card__title">Запишитесь на бесплатное пробное
 									занятие и получите
 									<img src="img/icons/i-present.svg" alt="Gift" class="feedback__title-icon">

@@ -14,6 +14,8 @@
   text-transform: uppercase
 .subtitle
   color: $subtitle-color
+  @media (max-width: 576px)
+    max-width: 340px
 .title-time
   padding-top: 1rem
   display: flex
@@ -30,6 +32,19 @@
   align-items: center
   min-height: 90vh
   padding-top: 0
+  .container
+    @media (max-width: 576px)
+      position: relative
+      &:after
+        content: ''
+        background-image: url('../img/hero-img.svg')
+        opacity: 0.2
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: -1
   &__subtitle
     color: $second
     text-transform: uppercase
@@ -48,10 +63,20 @@
   &__link
     padding: .5rem 1.25rem
     width: max-content
+    @media (max-width: 768px)
+      width: 100%
+      text-align: center
+      padding: 1rem
+      font-weight: 700
+      margin-bottom: 1rem
   &__content
     display: flex
     flex-direction: column
     padding-top: 48px
+    @media (max-width: 768px)
+      align-items: center
+      text-align: center
+
   &__text
     margin-top: 1rem
     margin-bottom: 2rem
@@ -59,9 +84,54 @@
     line-height: 27px
     color: $font-color
     max-width: 350px
+    @media (max-width: 768px)
+      text-align: center
   &__img
     width: 100%
     max-width: 570px
+    @media (max-width: 576px)
+      display: none
+
+.about
+  display: none
+
+.steps
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  position: relative
+  &:after
+    content: url(../img/img-step-line.svg)
+    position: absolute
+    top: 125px
+  @media (max-width: 769px)
+    &
+      flex-direction: column
+    &:after
+      display: none
+.step
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-right: 9rem
+  &:last-child
+    margin-right: 0
+  &__icon
+    margin-bottom: 5rem
+    max-width: 84px
+  &__content
+    max-width: 220px
+    text-align: center
+    min-height: 137px
+  @media (max-width: 992px)
+    margin-right: 4rem
+  @media (max-width: 768px)
+    &
+      margin-right: 0
+      margin-bottom: 2rem
+    &__icon
+      margin-bottom: .5rem
 
 .first-form
   padding: 2rem 4rem 2rem 2rem
@@ -76,6 +146,8 @@
     position: absolute
     right: -40px
     top: -42px
+    @media (max-width: 576px)
+      display: none
   &__content
     width: 100%
     max-width: 770px
@@ -88,6 +160,10 @@
     display: flex
     align-items: center
     width: 100%
+    @media (max-width: 768px)
+      flex-direction: column
+      label
+        width: 100%
   &__input
     border-radius: .5rem
     padding: .66rem 1rem
@@ -103,6 +179,8 @@
     &:focus, &:active
       outline: none
       border-color: $second
+    @media (max-width: 768px)
+      width: 100%
   &__button
     padding: 10px 26px
     border-radius: .5rem
@@ -116,6 +194,12 @@
     &:focus, &:active, &:hover
       outline: none
       box-shadow: 0px 4px 12px rgba(250, 194, 105, 0.3)
+    @media (max-width: 768px)
+      width: 100%
+  @media (max-width: 992px)
+    &__img-wrapp
+      display: none
+
 
 .cards
   padding-top: 2rem
@@ -167,9 +251,19 @@
       margin-right: 0
       margin-top: 4rem
       text-align: center
+  .card__title
+    @media (max-width: 576px)
+      text-align: center
 .card
   &__body, &__list-wrap
     display: flex
+    align-items: center
+  &__body
+    @media (max-width: 1192px)
+      flex-direction: column
+  &__content
+    display: flex
+    flex-direction: column
     align-items: center
   &_price
     padding: 2rem 1rem
@@ -180,13 +274,39 @@
       box-shadow: 0px 4px 20px rgba(70, 70, 85, 0.25)
     .card__text
       margin-bottom: 1rem
+      @media (max-width: 1192px)
+        text-align: center
   &__list-wrap
     justify-content: space-between
+    @media (max-width: 1192px)
+      justify-content: normal
+    @media (max-width: 576px)
+      flex-direction: column
+  &__list
+    margin-right: .5rem
+    @media (max-width: 1192px)
+      margin-right: 2rem
+    @media (max-width: 576px)
+      margin-right: 0
+      width: 100%
   &__list-item
     margin-bottom: .5rem
     color: $font-color
+  &__list-icon
+    margin-right: .25rem
   &__img
     margin-right: 1rem
+    @media (max-width: 1192px)
+      margin-right: 0
+      margin-bottom: 1rem
+    &_header
+      display: none
+    @media (max-width: 1192px)
+      &_footer
+        display: none
+      &_header
+        display: block
+        margin-right: 1rem!important
   &_course
     .card__title, .card__text
       margin-bottom: 1rem
@@ -233,3 +353,68 @@
   @media (max-width: 992px)
     &__img
       margin-bottom: 2rem
+
+// Carousel
+.slider
+  background-color: $accent
+.slide
+  width: 100%
+  display: flex
+  justify-content: center
+  color: $white
+  min-height: 500px
+  padding: 2rem 0
+  @media (max-width: 768px)
+    min-height: 600px
+  @media (max-width: 576px)
+    min-height: 750px
+  &__body
+    width: 70%
+  &__header
+    display: flex
+    justify-content: center
+    @media (max-width: 576px)
+      flex-direction: column
+  &__photo
+    border-radius: 50%
+    width: 100%
+    max-width: 128px
+  &__user
+    margin-left: 1rem
+    padding-top: .5rem
+  &__username
+    color: $white
+    margin-bottom: .5rem
+  &__user-status
+    color: $white
+  &__text
+    font-size: 16px
+    line-height: 24px
+    font-weight: 400
+  &__link
+    font-weight: 700
+    font-size: 16px
+    line-height: 24px
+    color: $white
+    display: flex
+    margin-top: 1rem
+    text-decoration: underline
+    &:hover
+      color: $white
+.separator
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 2rem 0
+  div
+    background-color: $white
+  &__line
+    width: 100%
+    max-width: 256px
+    height: 2px
+    border-radius: 1px
+  &__ellipse
+    min-width: .5rem
+    min-height: .5rem
+    margin: 0 1rem
+    border-radius: 50%

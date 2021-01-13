@@ -1,5 +1,7 @@
 .main-header
-  padding: 16px 0
+  padding: 1rem 0
+  @media (max-width: 992px)
+    padding: 1rem
   &__wrapper
     display: flex
     align-items: center
@@ -9,6 +11,60 @@
     img
       width: 100%
       max-width: 268px
+
+
+  &__navigation
+    @media (max-width: 992px)
+      display: none
+.burger
+  display: none
+  position: relative
+  @media (max-width: 992px)
+    display: block
+.burger-icon
+  padding: .5rem
+  cursor: pointer
+  &__line
+    width: 2rem
+    height: .25rem
+    border-radius: 2px
+    background-color: $accent
+    margin-bottom: .25rem
+
+.burger-dropdown
+  position: absolute
+  left: -160px
+  .main-nav
+    flex-direction: column
+    width: max-content
+    background-color: #fff
+    padding: .5rem
+    padding-bottom: 1rem
+    border-radius: .5rem
+    border: 2px solid $border-color
+    &__item
+      margin-right: 0
+      margin-bottom: .5rem
+      &:last-child
+        margin-top: .5rem
+.modal-content
+  border: none
+.modal-body
+  .main-nav
+    flex-direction: column
+    align-items: flex-start
+    &__item
+      margin-right: 0
+      width: 100%
+      border-bottom: 2px solid $border-color
+      &_button, &_price
+        border-bottom: none
+    &__link
+      display: flex
+      justify-content: center
+      width: 100%
+      padding: 1rem
+
 
 .main-nav
   display: flex
