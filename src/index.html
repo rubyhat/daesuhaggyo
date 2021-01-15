@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Онлайн школа корейского языка - Daesuhaggyo</title>
+	<meta property="og:description" name="description" content="Наша онлайн школа - это Ваш проводник в изучении корейского языка. С нами Вы сможете с нуля изучить корейский язык и уже через несколько месяцев уверенно владеть основами языка!" />
+	<meta property="og:title" content="Онлайн школа корейского языка - Daesuhaggyo" />
+	<meta property="og:site_name" content="Daesuhaggyo">
+	<meta property="og:url" content="https://daesuhaggyo.ru" />
+	<meta property="og:image" content="https://daesuhaggyo.ru/img/meta-tag-image.png" />
 	<!-- Favicons -->
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
@@ -113,7 +118,42 @@
 								</div>
 							</div>
 						</div>
-
+						<div class="col-12 col-xl-6 wow animate__animated animate__fadeIn">
+							<div class="about__img-wrap">
+								<img src="img/img-about-1.jpg" srcset="img/img-about-retina-1.jpg 2x" alt="photo" class="about__img">
+							</div>
+						</div>
+						<div class="col-12 col-xl-6 wow animate__animated animate__fadeIn">
+							<div class="about__content">
+								<div class="about__header">
+									<h2 class="about__title">Ан Юлиан</h2>
+									<div class="about__subtitle-wrap">
+										<p class="about__subtitle">
+											Преподаватель и основатель 대수 학교
+										</p>
+										<a href="https://www.instagram.com/daesuhaggyo/" target="_blank" class="about__social-link">
+											<img src="img/icons/i-instagram.svg" alt="Instagram">
+										</a>
+									</div>
+								</div>
+								<p class="about__text fz-mt lh-mt card__text">
+									안녕하세요, 여러분~ Меня зовут Юлиан. Я основатель онлайн-школы 대수 학교 и ваш преподаватель корейского языка. Также являюсь
+									лауреатом стипендии от OKF (Overseas Koreans Foundation).
+								</p>
+								<p class="about__text fz-mt lh-mt card__text">
+									Более 3х лет занимаюсь преподаванием. И имею практику изучения данного языка в Корее и сертификат о сдаче международного
+									экзамена TOPIK.
+								</p>
+								<p class="about__text fz-mt lh-mt card__text">
+									Благодаря преподаванию, своим студентам и разговорным клубам в нашей школе, я постоянно нахожусь в языковой среде.
+									Постоянная практика не дает языку умереть.
+								</p>
+								<p class="about__text fz-mt lh-mt card__text">
+									Преподаю с 2017 года и точно знаю, как объяснить материал легко, быстро и доступно. И это, на мой взгляд, самое важное
+									при выборе педагога. Ведь зачем вам сложности, верно?
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -162,9 +202,9 @@
 									<h2 class="first-form__title">Оставьте заявку и получите подарок!</h2>
 									<p class="first-form__text">Расскажите нам, как с Вами связаться и мы пригласим Вас на бесплатный пробный урок,
 										а также подарим полезную шпаргалку, которая поможет Вам в изучении языка!</p>
-									<form action="POST" class="first-form__form">
-										<label><input type="text" class="first-form__input" placeholder="Ваше имя"></label>
-										<label><input type="text" class="first-form__input" placeholder="Ваш номер"></label>
+									<form action="telegram.php" method="POST" class="form first-form__form">
+										<label><input type="text" class="first-form__input" placeholder="Ваше имя" name="first-form__name"></label>
+										<label><input type="text" class="first-form__input" placeholder="Ваш номер" name="first-form__phone"></label>
 										<button class="first-form__button" type="submit">Отправить</button>
 									</form>
 								</div>
@@ -627,9 +667,9 @@
 									Тэсу Хаккё и получите <span class="card__text_accent">подарок</span>, который
 									обязательно <span class="card__text_accent">поможет Вам</span> в изучении корейского языка!
 								</div>
-								<form action="POST" class="feedback__form">
-									<label><input type="text" placeholder="Ваше имя" class="feedback__input"></label>
-									<label><input type="text" placeholder="Ваш номер" class="feedback__input"></label>
+								<form action="telegram.php" method="POST" class="form feedback__form">
+									<label><input type="text" placeholder="Ваше имя" name="feedback__name" class="feedback__input"></label>
+									<label><input type="text" placeholder="Ваш номер" name="feedback__phone" class="feedback__input"></label>
 									<button class="feedback__button button">Отправить</button>
 								</form>
 							</div>

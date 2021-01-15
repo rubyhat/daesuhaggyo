@@ -18,4 +18,21 @@ $(document).ready(function () {
 
   // Animation
   new WOW().init();
+
+  // Form script
+  $('.form').submit(function () {
+    $.ajax({
+      type: "POST",
+      url: "telegram.php",
+      data: $(this).serialize()
+    }).done(function () {
+      // $('.form__note').removeClass('display-none');
+      $(this).find('input').val('');
+      $('.form').trigger('reset');
+      // setTimeout(function() {
+        // $('.form__note').addClass('display-none');
+      // }, 1000);
+    });
+    return false;
+  });
 });
