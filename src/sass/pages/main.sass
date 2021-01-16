@@ -14,6 +14,8 @@
   text-transform: uppercase
 .subtitle
   color: $subtitle-color
+  font-size: 1rem
+  font-weight: 40
   @media (max-width: 576px)
     max-width: 340px
 .title-time
@@ -172,10 +174,46 @@
   &::after
     content: url('../img/chr-hat.svg')
     position: absolute
+    z-index: 2
     right: -40px
     top: -42px
     @media (max-width: 576px)
       display: none
+  &__success
+    background-color: $accent
+    width: 100%
+    height: 100%
+    border-radius: 1rem
+    padding: 1rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: absolute
+    left: 0
+    z-index: 1
+    &-img
+      width: max-content
+      height: max-content
+      padding: .5rem
+      border-radius: 50%
+      border: .25rem solid $second
+      background-color: $white
+    &-title, &-text, &-link
+      color: $white
+      text-align: center
+    &-title
+      margin: 1rem 0
+    &-link
+      text-decoration: underline
+      font-weight: 700
+      margin-top: 0.5rem
+      display: flex
+      align-items: center
+      &:hover
+        color: $white
+    &-icon
+      margin-left: 0.5rem
   &__content
     width: 100%
     max-width: 770px
@@ -347,6 +385,15 @@
 
 .feedback
   padding-bottom: 4rem
+  &__success
+    padding: .5rem
+    border-radius: .5rem
+    background-color: $green
+    color: $white
+    font-weight: 700
+    width: 100%
+    margin-top: 0.5rem
+    text-align: center
   &__title, &__text
     margin-bottom: 1rem
   &__img img
@@ -450,3 +497,6 @@
     min-height: .5rem
     margin: 0 1rem
     border-radius: 50%
+
+.input-error
+      border-color: $red
